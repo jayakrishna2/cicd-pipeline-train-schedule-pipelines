@@ -3,9 +3,10 @@ pipeline {
   stages{
     stage('Build'){
       step{
-        echo "Running Jenkinsfile"
+        echo 'Running Jenkinsfile'
         sh './gradlew build  --no-daemon'
-        archiveArtifacts arctifact: 'dist/train.zip'
-    }
+        archiveArtifacts artifact: 'dist/train.zip'
+       }
+     }
   }
 }
